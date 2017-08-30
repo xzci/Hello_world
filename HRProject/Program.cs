@@ -12,44 +12,51 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace HRProject
 {
 
+   
     class Program
     {
-        public void Logger(String lines)
+        public static void Logger(string lines, string context)
         {
 
-            // Write the string to a file.append mode is enabled so that the log
-            // lines get appended to  test.txt than wiping content and writing the log
-
-            System.IO.StreamWriter file = new System.IO.StreamWriter("c:\\test.txt", true);
-            file.WriteLine(lines);
+            // Write Log
+            var fileName = string.Format("{0}//log.txt", Directory.GetCurrentDirectory());
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"c:\.txt", true);
+            file.WriteLine(lines + ": " + context);
 
             file.Close();
 
         }
+
+       
+        
         static void Main(string[] args)
         {
+            // Get Input File, Now it is Hard Code, should Change it.
             var fileName = string.Format("{0}\\1.xlsx", Directory.GetCurrentDirectory());
 
             //Console.WriteLine(fileName);
             
             var connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=1\";", fileName);
 
-
-
+            Logger("36", "Open Excel");
+            
+            
             var adapter = new OleDbDataAdapter("SELECT * FROM [sheet1$]", connectionString);
+
             var ds = new DataSet();
 
             //adapter.Fill(ds, "anyNameHere");
-            adapter.Fill(ds, "1");
+            #region need to rebuild
+            adapter.Fill(ds, "Excel");
 
-            DataTable myTestDT = ds.Tables["1"];
-
+            DataTable myTestDT = ds.Tables["Excel"];
 
             foreach (DataColumn i in myTestDT.Columns)
             {
                 Console.Write(i.ColumnName);
                 Console.Write("  ");
             }
+
             Console.WriteLine();
 
             foreach (DataRow i in myTestDT.Rows)
@@ -61,6 +68,9 @@ namespace HRProject
                 }
                 Console.WriteLine();
             }
+            #endregion
+
+
 
         }
     }
