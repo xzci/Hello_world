@@ -19,8 +19,17 @@ namespace HRProject
 
         private DateTime birthday;
 
-        private string sex;
+        private string gender;
 
+        private string city;
+
+        private string accountName;
+
+        private string bankAccount;
+
+        private string formlyCompany;
+
+        private string email;
         #endregion
        
 
@@ -30,10 +39,23 @@ namespace HRProject
 
         public string ID { get { return id; } set { id = value; } }
 
-        
-        public virtual bool GetTermination()
+        public string Gender { get { return gender; } set { gender = value; } }
+
+        public string City { get { return city; } set { city = value; } }
+
+        public string BankAccount { get { return bankAccount; } set { bankAccount = value; } }
+
+        public string AccountName { get { return accountName; } set { accountName = value; } }
+
+        public string FormlyCompany { get { return formlyCompany; } set { formlyCompany = value; } }
+
+        public string Email { get { return email; } set { email = value; } }
+
+
+
+        public virtual void GetTermination()
         {
-            return false;
+           
         }
 
     }
