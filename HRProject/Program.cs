@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
+
 //using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 
@@ -81,6 +82,12 @@ namespace HRProject
             *  HR can read the new hired employees from [resume] or just type the each information
             *  into the program, and then the program should save the information to Excel.
             */
+
+
+            
+            
+
+            
         }
     }
 }

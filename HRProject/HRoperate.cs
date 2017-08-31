@@ -9,22 +9,25 @@ namespace HRProject
     class HRoperate
     {
 
-        public void UpDate()
+        public static void UpDateFromExcl()
         {
-            //read information from excel and build data
+            // read information from excel and get into memory
+            // meke it becaome a dictionary
+
         }
 
-        public void UpDate(Employee e)
+        public static void UpDate(Dictionary<EmployeeId,Employee> employees, EmployeeId id, Employee e)
         {
-            //change the one information which read from the excel
+            
         }
 
-        public void WriteToExcel(Employee[] e)
+
+        public static void WriteToExcel(Employee[] e)
         {
             //write all information to excel
         }
 
-        public void WriteToexcel(Employee e)
+        public static void WriteToexcel(Employee e)
         {
             //write one information to excelm
         }
