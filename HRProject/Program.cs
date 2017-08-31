@@ -13,57 +13,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace HRProject
 {
 
-  /* class Trips
+
+    public class Program
     {
-        public static void F()
-        {
-            // Get Input File, Now it is Hard Code, should Change it.
-            var fileName = string.Format("{0}\\1.xlsx", Directory.GetCurrentDirectory());
-
-            //Console.WriteLine(fileName);
-
-            var connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=1\";", fileName);
-
-            Log.Logger("36", "Open Excel");
-
-
-            var adapter = new OleDbDataAdapter("SELECT * FROM [sheet1$]", connectionString);
-
-            var ds = new DataSet();
-
-            //adapter.Fill(ds, "anyNameHere");
-            #region need to rebuild
-            adapter.Fill(ds, "Excel");
-
-            DataTable myTestDT = ds.Tables["Excel"];
-
-            foreach (DataColumn i in myTestDT.Columns)
-            {
-                Console.Write(i.ColumnName);
-                Console.Write("  ");
-            }
-
-            Console.WriteLine();
-
-            foreach (DataRow i in myTestDT.Rows)
-            {
-                foreach (var r in i.ItemArray)
-                {
-                    Console.Write(r);
-                    Console.Write("  ");
-                }
-                Console.WriteLine();
-            }
-            #endregion
-        }
-    }
-    */
-
-    class Program
-    {
-     
-
-       
         
         static void Main(string[] args)
         {
@@ -79,13 +31,14 @@ namespace HRProject
             EmployeeId id = new EmployeeId("E000001");
             var employees = new Dictionary<EmployeeId, Employee>();
             employees.Add(id, e);
-
+            string filename = "Roster";
+            string sheetname = "Roster";
             // get information from the excel
-            employees = HRoperate.UpDateFromExcl();
+            employees = HROperate.UpDateFromExcl(filename, sheetname);
 
-            HRoperate.UpDate(employees,id);
+            HROperate.UpDate(employees,id);
 
-            HRoperate.WriteToExcel(employees);
+            HROperate.WriteToExcel(employees);
 
 
             // Console.WriteLine(e);

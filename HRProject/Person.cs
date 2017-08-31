@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace HRProject
 {
-    class Person
+    public class Person
     {
         public Person()
         {
             //
         }
+
         #region Person Information
         private string name;
 

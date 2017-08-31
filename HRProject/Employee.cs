@@ -11,7 +11,7 @@ namespace HRProject
         public EmployeeIdExcetion(string message) : base(message) { }
     }
 
-    class Employee : Person
+    public class Employee : Person
     {
 
         public Employee()
@@ -77,6 +77,7 @@ namespace HRProject
         }
 
     }
+
     // Employee id is total of seven, one char means employee type, rest of them is number
     // eg.T000001
     public class EmployeeId : IEquatable<EmployeeId>
