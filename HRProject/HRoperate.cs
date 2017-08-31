@@ -8,30 +8,42 @@ namespace HRProject
 {
     class HRoperate
     {
+        public static void OpenExcel()
+        {
+            // open default excel
+        }
 
-        public static void UpDateFromExcl()
+        public static void OpenExcel(string filename)
+        {
+            // open specific excel
+        }
+
+        public static Dictionary<EmployeeId,Employee> UpDateFromExcl()
         {
             // read information from excel and get into memory
             // meke it becaome a dictionary
 
+            var employees = new Dictionary<EmployeeId, Employee>();
+            return employees;
+
         }
 
-        public static void UpDate(Dictionary<EmployeeId,Employee> employees, EmployeeId id, Employee e)
+        public static void UpDate(Dictionary<EmployeeId,Employee> employees, EmployeeId id)
         {
-            
+            // update all the information
         }
 
 
-        public static void WriteToExcel(Employee[] e)
+       
+
+        public static void WriteToExcel(Dictionary<EmployeeId, Employee> employees)
         {
-            //write all information to excel
+            // write one information to excel
         }
 
-        public static void WriteToexcel(Employee e)
+        public static void WriteToExcel(EmployeeId id, Employee e)
         {
-            //write one information to excelm
+            // write single person to excel
         }
-
-
     }
 }

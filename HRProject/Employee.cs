@@ -20,6 +20,8 @@ namespace HRProject
         }
 
         #region Company Information
+        private readonly EmployeeId emid;
+
         private DateTime lastWorkingDate;
 
         private DateTime startWorkingDate;
@@ -104,7 +106,7 @@ namespace HRProject
                 throw new EmployeeIdExcetion("Invalid Emplyee Id format");
             }
         }
-
+       
         public override string ToString()
         {
             return prefix.ToString() + string.Format("(0,6:000000)", number);

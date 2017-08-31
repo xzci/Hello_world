@@ -13,7 +13,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace HRProject
 {
 
-   class Trips
+  /* class Trips
     {
         public static void F()
         {
@@ -24,7 +24,7 @@ namespace HRProject
 
             var connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=1\";", fileName);
 
-            Program.Logger("36", "Open Excel");
+            Log.Logger("36", "Open Excel");
 
 
             var adapter = new OleDbDataAdapter("SELECT * FROM [sheet1$]", connectionString);
@@ -57,21 +57,11 @@ namespace HRProject
             #endregion
         }
     }
-
+    */
 
     class Program
     {
-        public static void Logger(string lines, string context)
-        {
-
-            // Write Log
-            var fileName = string.Format("{0}//log.txt", Directory.GetCurrentDirectory());
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"c:\.txt", true);
-            file.WriteLine(lines + ": " + context);
-
-            file.Close();
-
-        }
+     
 
        
         
@@ -82,6 +72,25 @@ namespace HRProject
             *  HR can read the new hired employees from [resume] or just type the each information
             *  into the program, and then the program should save the information to Excel.
             */
+
+            Employee e = new Employee();
+            e.Name = Console.ReadLine();
+
+            EmployeeId id = new EmployeeId("E000001");
+            var employees = new Dictionary<EmployeeId, Employee>();
+            employees.Add(id, e);
+
+            // get information from the excel
+            employees = HRoperate.UpDateFromExcl();
+
+            HRoperate.UpDate(employees,id);
+
+            HRoperate.WriteToExcel(employees);
+
+
+            // Console.WriteLine(e);
+
+
 
 
             
