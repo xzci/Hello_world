@@ -70,7 +70,7 @@ namespace HRProject
         public override void GetTermination()
         {
 
-            //delete the one from the excel who call this funtaion.
+            // delete the one from the excel who call this funtaion.
 
             // and write all these informaion to Termination sheet
             
