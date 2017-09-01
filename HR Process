@@ -1,0 +1,6 @@
+that is the detail of HR process:
+
+
+1. when enployee join the company, HRs should give him a specific id, and updata his informaiton to excel(or sql),  
+   then Using these basic information, you can do some more advanced operations, including training, transfer or other 
+   human resources related operations
