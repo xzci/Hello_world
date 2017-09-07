@@ -14,7 +14,7 @@ namespace HRProject
 
             // Write Log
             var fileName = string.Format("{0}//log.txt", Directory.GetCurrentDirectory());
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"c:\.txt", true);
+            System.IO.StreamWriter file = new System.IO.StreamWriter(fileName, true);
             string time = DateTime.Now.ToShortTimeString();
             file.WriteLine(lines + ": " + time + " [" + context + "]" );
             file.Close();

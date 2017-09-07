@@ -25,25 +25,27 @@ namespace HRProject
             *  into the program, and then the program should save the information to Excel.
             */
 
-            Employee e = new Employee();
-            e.Name = Console.ReadLine();
+            //Employee e = new Employee();
+            //e.Name = Console.ReadLine();
 
             EmployeeId id = new EmployeeId("E000001");
             var employees = new Dictionary<EmployeeId, Employee>();
-            employees.Add(id, e);
+            //employees.Add(id, e);
             string filename = "Roster";
             string sheetname = "Roster";
+
+
             // get information from the excel
             employees = HROperate.UpDateFromExcl(filename, sheetname);
+            
 
             HROperate.UpDate(employees,id);
 
             HROperate.WriteToExcel(employees);
 
+            
 
             // Console.WriteLine(e);
-
-
 
 
             

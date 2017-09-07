@@ -20,7 +20,7 @@ namespace HRProject
         }
 
         #region Company Information
-        private readonly EmployeeId emid;
+        private readonly EmployeeId emID;
 
         private DateTime lastWorkingDate;
 
@@ -36,7 +36,7 @@ namespace HRProject
 
         private string jobTitle;
 
-        private string jobcode;
+        private string jobCode;
 
         private string companyEmail;
 
@@ -57,7 +57,7 @@ namespace HRProject
 
         public string JobTitle { get { return jobTitle; } set { jobTitle = value; } }
 
-        public string JobCode { get { return jobcode; }  set { jobcode = value; } }
+        public string JobCode { get { return jobCode; }  set { jobCode = value; } }
 
         public string CompanyEmail { get { return companyEmail; } set { companyEmail = value; } }
 

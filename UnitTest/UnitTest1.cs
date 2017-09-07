@@ -9,7 +9,13 @@ namespace UnitTest
         [TestMethod]
         public void TestMethod1()
         {
-            
+            //Assert.AreSame(HRProject.HROperate.test(), 1);
         }
+
+
+
+
+
+
     }
 }
