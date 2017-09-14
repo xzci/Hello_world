@@ -14,10 +14,6 @@ namespace HRProject
     public class Employee : Person
     {
 
-        public Employee()
-        {
-            //
-        }
 
         #region Company Information
         private readonly EmployeeId emID;
