@@ -7,8 +7,10 @@ I mean i want to this project can do something just like HR. hope i can finish :
 
 after all it is a studying project. 
 
-here is the schedule
-12-2017
+here is the schedule 
+
+12-2017 
+
  +-----------------------------+    1. study English 
  | Su  Mo  Tu  We  Th  Fr  Sa  |    2. update Blogs 
  | 03  04  05  06  07  08  09  |    3.  
